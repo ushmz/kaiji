@@ -28,6 +28,7 @@ func Execute() {
 	cmd.SetOutput(os.Stdout)
 	if err := cmd.Execute(); err != nil {
 		cmd.SetOutput(os.Stderr)
+		cmd.Printf("%v\n\n", err)
 		cmd.Usage()
 		os.Exit(1)
 	}
