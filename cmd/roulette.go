@@ -10,7 +10,7 @@ import (
 func newCommandRoulette() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "roulette",
-		Short: "Choose one of given arguments",
+		Short: "Choose one of the input lines to standard output. \nProbability increases as the index grows.",
 		Run: func(cmd *cobra.Command, args []string) {
 			escalationSelect(cmd, args)
 		},

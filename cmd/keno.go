@@ -17,7 +17,7 @@ func newCommandKeno() *cobra.Command {
 	var o = &option{}
 	cmd := &cobra.Command{
 		Use:   "keno",
-		Short: "Choose one of given arguments",
+		Short: "Choose `n` counts of the input lines EXCEPT `n`th input line to standard output.",
 		PreRunE: func(cmd *cobra.Command, args []string) error {
 			return validateParams(*o)
 		},
